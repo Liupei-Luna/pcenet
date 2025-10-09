@@ -1,0 +1,9 @@
+python: 3.11.7
+numPy: 1.26.4
+pandas: 2.1.4
+matplotlib: 3.10.5
+seaborn: 0.12.2
+PyTorch: 2.8.0+cpu
+PyTorch Geometric: 2.6.1
+SHAP: 0.48.0
+scikit-learn: 1.2.2
