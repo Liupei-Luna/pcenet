@@ -22,7 +22,7 @@ Web-based Interactive Screening Platform
 ## Introduction
 We present SolarPCE-Net, a novel deep learning framework for predicting power conversion efficiency (PCE) of donor-acceptor (D-A) pairs in organic photovoltaics (OPVs). The model integrates residual networks with self-attention mechanisms in a dual-channel architecture to capture intricate D-A coupling effects that critically influence device performance. SolarPCE-Net achieves state-of-the-art prediction accuracy (test R² = 0.81) on the HOPV15 dataset and enables high-throughput virtual screening of unexplored D-A combinations, accelerating the discovery of high-performance OPV materials.
 
-![Figure 1: architecture](https://github.com/Liupei-Luna/pcenet/tree/main/Figures/Fig 1.png)
+![Figure 1: architecture](https://github.com/Liupei-Luna/pcenet/Fig 1.png)
 
 Installation
 Create a Conda environment and install dependencies using requirements.txt:
