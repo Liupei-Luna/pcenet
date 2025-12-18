@@ -73,6 +73,7 @@ Through attention weight analysis and SHAP values, SolarPCE-Net identifies criti
 ## Citation
 If you find this repository useful, please consider giving a star ⭐ and citing our paper:
 
+```
 text
 @article{liu2025accelerating,
   title={Accelerating the discovery of high-efficiency donor--acceptor pairs in organic photovoltaics via SolarPCE-Net guided screening},
@@ -81,6 +82,7 @@ text
   year={2025},
   doi={10.1039/d5ta04854k}
 }
+```
 
 ## Acknowledgments
 This research was supported by:
