@@ -62,8 +62,8 @@ python src/screen.py --model_path ./models/solarpce_net.pth --donor_library ./da
 
 ## Performance
 SolarPCE-Net demonstrates superior performance compared to traditional machine learning and graph neural network methods:
-![](https://github.com/Liupei-Luna/pcenet/blob/main/Figures/Fig%202.png)
-![](https://github.com/Liupei-Luna/pcenet/blob/main/Figures/Fig%203.png)
+![Figures/Fig 2.png](https://github.com/Liupei-Luna/pcenet/blob/main/Figures/Fig%202.png)
+![Figures/Fig 3.png](https://github.com/Liupei-Luna/pcenet/blob/main/Figures/Fig%203.png)
 
 ## Interpretability and Key Molecular Descriptors
 Through attention weight analysis and SHAP values, SolarPCE-Net identifies critical molecular substructures that significantly influence PCE, including sulfur-containing five-membered rings, enhanced conjugated systems, and linear conjugated structures. These insights provide actionable guidance for rational OPV material design.
