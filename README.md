@@ -22,52 +22,50 @@ Web-based Interactive Screening Platform
 ## Introduction
 We present SolarPCE-Net, a novel deep learning framework for predicting power conversion efficiency (PCE) of donor-acceptor (D-A) pairs in organic photovoltaics (OPVs). The model integrates residual networks with self-attention mechanisms in a dual-channel architecture to capture intricate D-A coupling effects that critically influence device performance. SolarPCE-Net achieves state-of-the-art prediction accuracy (test R² = 0.81) on the HOPV15 dataset and enables high-throughput virtual screening of unexplored D-A combinations, accelerating the discovery of high-performance OPV materials.
 
-![Figure 1: architecture](https://github.com/Liupei-Luna/pcenet/Fig 1.png)
+![Figures/Fig 1.png](https://github.com/Liupei-Luna/pcenet/blob/main/Figures/Fig%201.png)
 
-Installation
+
+## Installation
 Create a Conda environment and install dependencies using requirements.txt:
 
 ```bash
 conda create --name solarpce python=3.10
 conda activate solarpce
 pip install -r requirements.txt
+```
 Or setup environment with provided YML file:
-
 ```bash
 conda env create -f environment.yml
-Usage
+```
+
+## Usage
 Data Preparation
 If you want to work with the HOPV15 dataset used in our study, you can download and preprocess it using:
-
 ```bash
 python src/data_preparation.py --data_path ./data/HOPV15.csv
+```
 Model Training
 Train the SolarPCE-Net model with default hyperparameters:
-
 ```bash
 python src/train.py --data_path ./data/HOPV15_processed.csv --epochs 100 --batch_size 32 --lr 1e-3
+```
 PCE Prediction
 Use the trained model to predict PCE for new donor-acceptor pairs:
-
 ```bash
 python src/predict.py --model_path ./models/solarpce_net.pth --input_file ./data/new_pairs.csv
+```
 High-Throughput Screening
 Perform virtual screening of unexplored D-A combinations:
-
 ```bash
 python src/screen.py --model_path ./models/solarpce_net.pth --donor_library ./data/donors.csv --acceptor_library ./data/acceptors.csv
 ```
-Performance
-SolarPCE-Net demonstrates superior performance compared to traditional machine learning and graph neural network methods:
 
-## Method
-Test R²	MAE	SE
-SolarPCE-Net	0.81	0.35	0.45
-Random Forest	0.76	0.37	0.51
-Gradient Boosting Regression	0.71	0.39	0.54
-MPNN	0.70	0.38	0.55
-AttentiveFP	0.67	0.37	0.59
-Interpretability and Key Molecular Descriptors
+## Performance
+SolarPCE-Net demonstrates superior performance compared to traditional machine learning and graph neural network methods:
+![](https://github.com/Liupei-Luna/pcenet/blob/main/Figures/Fig%202.png)
+![](https://github.com/Liupei-Luna/pcenet/blob/main/Figures/Fig%203.png)
+
+## Interpretability and Key Molecular Descriptors
 Through attention weight analysis and SHAP values, SolarPCE-Net identifies critical molecular substructures that significantly influence PCE, including sulfur-containing five-membered rings, enhanced conjugated systems, and linear conjugated structures. These insights provide actionable guidance for rational OPV material design.
 
 ## Citation
